@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Your Data</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-4">Retrieve Your Data</h1>
+    <form id="retrieveForm" class="mb-4 flex flex-col">
+      <label for="user-email" class="text-lg font-medium">Enter Your Email:</label>
+      <input
+        type="text"
+        id="user-email"
+        class="border rounded w-full py-2 px-3 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      />
+
+      <label for="user-password" class="text-lg font-medium">Enter Your Password:</label>
+      <input type="password" id="user-password" class="border rounded w-full py-2 px-3 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required autocomplete="current-password">
+      <button
+        type="submit"
+        id="retrieveDataBtn"
+        class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Retrieve Data
+      </button>
+    </form>
+    <div id="resultContainer" style="display: none">
+      <h2 class="text-2xl font-bold mb-2">Your Data:</h2>
+      <ul id="dataList" class="list-disc pl-6"></ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
